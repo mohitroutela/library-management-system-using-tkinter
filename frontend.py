@@ -15,6 +15,7 @@ close
 from tkinter import *
 import backend
 window=Tk() #creates a window object
+window.wm_title("BookStore") #for naming your window
 l1=Label(window,text="Title")
 l1.grid(row=0,column=0)
 
@@ -74,10 +75,7 @@ def insert_command():
 	list1.insert(END,(title_text.get(),author_text.get(),year_text.get(),ISBN_text.get()))
 def delete_command():
 	backend.delete(selected_tuple[0])
-	e1.delete(0,END)
-	e2.delete(0,END)
-	e3.delete(0,END)
-	e4.delete(0,END)
+	
 
 
 def delete_all():
